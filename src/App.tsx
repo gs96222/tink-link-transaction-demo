@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/header";
+import Home from "./components/home";
+import Callback from "./components/callback";
+import { Transaction } from "./components/transaction";
 
-function App() {
+type AppProps = {
+  style?: any;
+};
+const App: React.FC<AppProps> = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Header />
+      <Container
+        maxWidth="sm"
+        sx={{ mt: 3, backgroundColor: "rgb(252, 252, 252)" }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            height: "87vh",
+            justifyContent: "center",
+            alignItems: "Center",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/callback" element={<Callback />} />
+            <Route path="/transactions" element={<Transaction />} />
+          </Routes>
+        </Box>
+      </Container>
+    </>
   );
-}
+};
 
 export default App;
