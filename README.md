@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 the dummy user i have used for building this application is - u36366585 - Income Check-Risk insights-Case 1(category).
 steps that i follow to get the data - 
-<img width="1406" alt="tink-link steps" src="https://user-images.githubusercontent.com/83594356/143327612-561e0638-3773-423b-8098-8f7f21eeb005.png"
+![alt text](https://user-images.githubusercontent.com/83594356/143327612-561e0638-3773-423b-8098-8f7f21eeb005.png)
 
 ## Common setup
 
